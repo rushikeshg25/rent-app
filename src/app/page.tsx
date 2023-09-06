@@ -5,6 +5,7 @@ import EmptyState from "@/app/components/EmptyState";
 import getListings, { IListingsParams } from "@/app/actions/getListings";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
+export const dynamic = "force-dynamic";
 interface HomeProps {
   searchParams: IListingsParams;
 }

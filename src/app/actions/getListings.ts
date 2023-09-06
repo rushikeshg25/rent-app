@@ -94,5 +94,4 @@ export default async function getListings(
     throw new Error(error);
   }
 }
-export const dynamic = 'force-dynamic'
 // 'auto' | 'force-dynamic' | 'error' | 'force-static'
