@@ -12,6 +12,7 @@ import { SafeUser } from "@/app/types";
 import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
 import useRentModal from "@/app/hooks/useRentModal";
+import ThemeToggleButton from "../Theme/ThemeToggleButton";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
@@ -33,6 +34,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
+        <div className="">
+          <ThemeToggleButton />
+        </div>
         <div
           onClick={rentModal.onOpen}
           className="
