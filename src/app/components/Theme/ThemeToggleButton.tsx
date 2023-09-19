@@ -3,8 +3,10 @@ import { useRecoilState } from "recoil";
 import { BsSun } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
 import { DarkMode } from "@/app/RecoilState/DarkModeState";
+import { useTheme } from "next-themes";
 
 const ThemeToggleButton = () => {
+  const { theme, setTheme } = useTheme();
   const [sun, setSun] = useRecoilState(DarkMode);
   const toggleMode = () => {
     setSun((prev) => !prev);

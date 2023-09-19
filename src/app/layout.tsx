@@ -7,7 +7,7 @@ import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/Modals/RentModal";
 import RegisterModal from "./components/Modals/RegisterModal";
 import LoginModal from "./components/Modals/LoginModal";
-import RecoilStateProvider from "./providers/RecoilStateProvider";
+import RecoilStateProvider from "./providers/ThemeRecoilProvider";
 
 const font = Nunito({ subsets: ["latin"] });
 
