@@ -8,6 +8,7 @@ import RentModal from "./components/Modals/RentModal";
 import RegisterModal from "./components/Modals/RegisterModal";
 import LoginModal from "./components/Modals/LoginModal";
 import RecoilStateProvider from "./providers/ThemeRecoilProvider";
+import SearchModal from "./components/Modals/SearchModal";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default async function RootLayout({
           <ToasterProvider />
           <RentModal />
           <RegisterModal />
+          <SearchModal />
           <LoginModal />
           <Navbar currentUser={currentUser} />
           <div className="pb-20 pt-28">{children}</div>
