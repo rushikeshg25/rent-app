@@ -18,7 +18,7 @@ import ImageUpload from "../Inputs/ImageUpload";
 import Input from "../Inputs/Input";
 import Heading from "../Heading";
 
-enum STEPS {
+enum STEPS { //To define the modal progress in part
   CATEGORY = 0,
   LOCATION = 1,
   INFO = 2,
