@@ -102,6 +102,7 @@ const Search = () => {
             pl-6 
             pr-2 
             text-gray-600 
+            dark:text-gray-200
             flex 
             flex-row 
             items-center 
