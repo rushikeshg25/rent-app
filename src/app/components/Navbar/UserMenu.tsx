@@ -12,6 +12,7 @@ import { SafeUser } from "@/app/types";
 import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
 import useRentModal from "@/app/hooks/useRentModal";
+import ThemeToggleButton from "../Theme/ThemeToggleButton";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
@@ -31,8 +32,11 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   }, []);
 
   return (
-    <div className="relative">
-      <div className="flex flex-row items-center gap-3">
+    <div className="relative bg-[#FDFEFE] dark:bg-[#0E1629]">
+      <div className="flex flex-row items-center gap-3 ">
+        <div className="active:outline-[#8E9DB2]">
+          <ThemeToggleButton />
+        </div>
         <div
           onClick={rentModal.onOpen}
           className="
@@ -46,6 +50,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             hover:bg-neutral-100 
             transition 
             cursor-pointer
+            dark:text-[#8E9DB2]
           "
         >
           Airbnb your home
@@ -66,6 +71,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           cursor-pointer 
           hover:shadow-md 
           transition
+          dark:text-[#8E9DB2]
           "
         >
           <AiOutlineMenu />

@@ -1,5 +1,4 @@
 import { SafeUser } from "@/app/types";
-
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -12,7 +11,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
-    <div className="fixed w-full bg-white z-10 shadow-sm">
+    <div className="fixed w-full bg-[#FDFEFE] dark:bg-[#0E1629] z-10 shadow-sm">
       <div
         className="
           py-4 
