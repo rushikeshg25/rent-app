@@ -122,17 +122,21 @@ const SearchModal = () => {
   }, [step]);
 
   let bodyContent = (
-    <div className="flex flex-col gap-8">
-      <Heading
-        title="Where do you wanna go?"
-        subtitle="Find the perfect location!"
-      />
-      <CountrySelect
-        value={location}
-        onChange={(value) => setLocation(value as CountrySelectValue)}
-      />
+    <div className="flex flex-col gap-8 dark:bg-[#0E1629]">
+      <div className="relative z-10 dark:bg-[#20293e]">
+        <Heading
+          title="Where do you wanna go?"
+          subtitle="Find the perfect location!"
+        />
+        <CountrySelect
+          value={location}
+          onChange={(value) => setLocation(value as CountrySelectValue)}
+        />
+      </div>
       <hr />
-      <Map center={location?.latlng} />
+      <div className="relative z-0">
+        <Map center={location?.latlng} />
+      </div>
     </div>
   );
 

@@ -28,7 +28,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   const location = getByValue(locationValue);
 
   return (
-    <>
+    <div>
       <Heading
         title={title}
         subtitle={`${location?.region}, ${location?.label}`}
@@ -40,6 +40,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           overflow-hidden 
           rounded-xl
           relative
+          
         "
       >
         <Image
@@ -58,7 +59,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           <HeartButton listingId={id} currentUser={currentUser} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

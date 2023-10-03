@@ -26,14 +26,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <RecoilStateProvider>
-        <body className={font.className}>
+        <body className={`${font.className}  dark:bg-[#0F172A] bg-[#F8FAFC]`}>
           <ToasterProvider />
           <RentModal />
           <RegisterModal />
           <SearchModal />
           <LoginModal />
           <Navbar currentUser={currentUser} />
-          <div className="pb-20 pt-28">{children}</div>
+          <div className="pb-20 pt-28 dark:bg-[#0F172A]">{children}</div>
         </body>
       </RecoilStateProvider>
     </html>

@@ -32,7 +32,7 @@ const Home = async ({ searchParams }: HomeProps) => {
             2xl:grid-cols-6
             gap-8
             bg-[#F8FAFC]
-            dark:bg[#0F172A]
+            dark:bg-[#0F172A]
           "
       >
         {listings.map((listing: any) => (

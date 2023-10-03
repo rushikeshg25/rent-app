@@ -107,9 +107,10 @@ const Search = () => {
             flex-row 
             items-center 
             gap-3
+            font-semibold 
           "
         >
-          <div className="hidden sm:block">{guestLabel}</div>
+          <div className="hidden  sm:block">{guestLabel}</div>
           <div
             className="
               p-2 

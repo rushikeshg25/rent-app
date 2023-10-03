@@ -68,7 +68,7 @@ const Modal: React.FC<ModalProps> = ({
   }
 
   return (
-    <>
+    <div>
       <div
         className="
           justify-center 
@@ -98,7 +98,6 @@ const Modal: React.FC<ModalProps> = ({
           md:h-auto
           "
         >
-          {/*content*/}
           <div
             className={`
             translate
@@ -110,6 +109,7 @@ const Modal: React.FC<ModalProps> = ({
           >
             <div
               className="
+              dark:bg-[#0E1629]
               translate
               h-full
               lg:h-auto
@@ -186,7 +186,7 @@ const Modal: React.FC<ModalProps> = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
