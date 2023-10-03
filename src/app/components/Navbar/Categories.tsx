@@ -22,6 +22,11 @@ import Container from "../Container";
 
 export const categories = [
   {
+    label: "Modern",
+    icon: MdOutlineVilla,
+    description: "This property is modern!",
+  },
+  {
     label: "Beach",
     icon: TbBeach,
     description: "This property is close to the beach!",
@@ -31,11 +36,7 @@ export const categories = [
     icon: GiWindmill,
     description: "This property is has windmills!",
   },
-  {
-    label: "Modern",
-    icon: MdOutlineVilla,
-    description: "This property is modern!",
-  },
+
   {
     label: "Countryside",
     icon: TbMountain,
@@ -91,11 +92,6 @@ export const categories = [
     icon: GiBarn,
     description: "This property is in a barn!",
   },
-  {
-    label: "Lux",
-    icon: IoDiamond,
-    description: "This property is brand new and luxurious!",
-  },
 ];
 
 const Categories = () => {
@@ -109,16 +105,15 @@ const Categories = () => {
   }
 
   return (
-    <Container>
+    <div className=" max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4  ">
       <div
         className="
-          pt-4
+          px-4
           flex 
           flex-row 
           items-center 
           justify-between
           overflow-x-auto
-          
         "
       >
         {categories.map((item) => (
@@ -130,7 +125,7 @@ const Categories = () => {
           />
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 

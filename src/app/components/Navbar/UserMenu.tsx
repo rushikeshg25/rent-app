@@ -50,13 +50,15 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             hover:bg-neutral-100 
             transition 
             cursor-pointer
-            dark:text-[#8E9DB2]
+            dark:text-[#d8dce1]
+            select-none
           "
         >
-          Airbnb your home
+          List your Property
         </div>
         <div
           onClick={toggleOpen}
+          onDoubleClick={(e) => e.preventDefault()}
           className="
           p-4
           md:py-1
@@ -95,7 +97,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             text-sm
           "
         >
-          <div className="flex flex-col cursor-pointer dark:bg-[#0E1629]">
+          <div className="flex flex-col cursor-pointer dark:bg-[#1E293B]">
             {currentUser ? (
               <>
                 <MenuItem
