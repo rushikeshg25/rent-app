@@ -97,7 +97,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             text-sm
           "
         >
-          <div className="flex flex-col cursor-pointer dark:bg-[#1E293B]">
+          <div className="flex flex-col cursor-pointer dark:bg-[#1E293B] select-none">
             {currentUser ? (
               <>
                 <MenuItem

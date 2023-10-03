@@ -116,9 +116,10 @@ const Search = () => {
               p-2 
               bg-gray-800
               rounded-full 
-              dark:bg-[#F8FAFC]
+              dark:bg-red-500
               text-white
               dark:text-gray-800
+              dark:outline-red-700
             "
           >
             <BiSearch size={18} />

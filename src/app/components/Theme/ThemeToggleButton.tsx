@@ -20,7 +20,7 @@ const ThemeToggleButton = () => {
   };
   return (
     <div
-      className="group rounded-md focus:border-black w-full h-full hover:bg-gray-300 p-[0.6rem] dark:bg-[#0E1629] dark:focus:border-gray-300"
+      className="group rounded-md focus:border-black w-full h-full hover:bg-gray-300 p-[0.6rem] dark:bg-[#0E1629]"
       onClick={toggleMode}
     >
       {theme === "light" ? (
