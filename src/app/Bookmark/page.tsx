@@ -3,8 +3,7 @@ import EmptyState from "@/app/components/EmptyState";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getFavoriteListings from "@/app/actions/getFavoriteListings";
 
-import FavoritesClient from "./FavoritesClient";
-//for listings
+import FavoritesClient from "./Bookmark";
 const ListingPage = async () => {
   const listings = await getFavoriteListings();
   const currentUser = await getCurrentUser();
@@ -12,8 +11,8 @@ const ListingPage = async () => {
   if (listings.length === 0) {
     return (
       <EmptyState
-        title="No favorites found"
-        subtitle="Looks like you have no favorite listings."
+        title="No Bookmarks found"
+        subtitle="Looks like you have no Bookmarks."
       />
     );
   }

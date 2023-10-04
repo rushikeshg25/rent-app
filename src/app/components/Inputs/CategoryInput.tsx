@@ -28,7 +28,12 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         hover:border-black
         transition
         cursor-pointer
-        ${selected ? "border-black" : "border-neutral-200"}
+        ${selected ? "border-black border-2" : "border-neutral-200"}
+        ${
+          selected
+            ? "dark:border-neutral-200 dark:border-2"
+            : "dark:border-[#4d525a] "
+        }
       `}
     >
       <Icon size={30} />

@@ -54,7 +54,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             select-none
           "
         >
-          List your Property
+          List your Space
         </div>
         <div
           onClick={toggleOpen}
@@ -116,7 +116,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   label="My properties"
                   onClick={() => router.push("/properties")}
                 />
-                <MenuItem label="Airbnb your home" onClick={rentModal.onOpen} />
+                <MenuItem label="List Your Space" onClick={rentModal.onOpen} />
                 <hr />
                 <MenuItem label="Logout" onClick={() => signOut()} />
               </>

@@ -6,7 +6,7 @@ import useCountries from "@/app/hooks/useCountries";
 import { SafeUser } from "@/app/types";
 
 import Heading from "../Heading";
-import HeartButton from "../HeartButton";
+import BookmarkButton from "../BookmarkButton";
 
 interface ListingHeadProps {
   title: string;
@@ -56,7 +56,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             right-5
           "
         >
-          <HeartButton listingId={id} currentUser={currentUser} />
+          <BookmarkButton listingId={id} currentUser={currentUser} />
         </div>
       </div>
     </div>

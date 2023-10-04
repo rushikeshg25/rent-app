@@ -8,7 +8,7 @@ import { format } from "date-fns";
 import useCountries from "@/app/hooks/useCountries";
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 
-import HeartButton from "../HeartButton";
+import BookmarkButton from "../BookmarkButton";
 import Button from "../Button";
 
 interface ListingCardProps {
@@ -101,18 +101,18 @@ const ListingCard: React.FC<ListingCardProps> = ({
             right-3
           "
           >
-            <HeartButton listingId={data.id} currentUser={currentUser} />
+            <BookmarkButton listingId={data.id} currentUser={currentUser} />
           </div>
         </div>
         <div className="font-semibold text-lg">
           {location?.region}, {location?.label}
         </div>
-        <div className="font-light text-neutral-500">
+        <div className="font-light text-neutral-500 dark:text-[#8E9DB2]">
           {reservationDate || data.category}
         </div>
         <div className="flex flex-row items-center gap-1">
           <div className="font-semibold">₹ {price}</div>
-          {!reservation && <div className="font-light">night</div>}
+          {!reservation && <div className="font-light">/Night</div>}
         </div>
         {onAction && actionLabel && (
           <Button

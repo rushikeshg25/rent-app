@@ -163,11 +163,15 @@ const RentModal = () => {
           title="Where is your place located?"
           subtitle="Help guests find you!"
         />
-        <CountrySelect
-          value={location}
-          onChange={(value) => setCustomValue("location", value)}
-        />
-        <Map center={location?.latlng} />
+        <div className="relative z-10">
+          <CountrySelect
+            value={location}
+            onChange={(value) => setCustomValue("location", value)}
+          />
+        </div>
+        <div className="relative z-0">
+          <Map center={location?.latlng} />
+        </div>
       </div>
     );
   }
@@ -271,7 +275,7 @@ const RentModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={rentModal.isOpen}
-      title="Airbnb your home!"
+      title="List My Space"
       actionLabel={actionLabel}
       onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}
