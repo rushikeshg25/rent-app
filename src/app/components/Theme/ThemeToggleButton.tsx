@@ -20,13 +20,13 @@ const ThemeToggleButton = () => {
   };
   return (
     <div
-      className="group rounded-md focus:border-black w-full h-full hover:bg-gray-300 p-[0.6rem] dark:bg-[#0E1629]"
+      className="group rounded-md focus:border-black w-full h-full hover:bg-gray-300 dark:hover:bg-slate-700 p-[0.6rem] dark:bg-[#0E1629]"
       onClick={toggleMode}
     >
-      {theme === "light" ? (
+      {theme === "dark" ? (
         <BsSun
           size={28}
-          className="group-hover:scale-125 transition-transform"
+          className="group-hover:scale-125 transition-transform text-[#8E9DB2]"
         />
       ) : (
         <BiMoon

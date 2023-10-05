@@ -1,7 +1,6 @@
 "use client";
 
 import axios from "axios";
-import { AiFillGithub } from "react-icons/ai";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
@@ -96,15 +95,11 @@ const RegisterModal = () => {
         icon={FcGoogle}
         onClick={() => signIn("google")}
       />
-      <Button
-        outline
-        label="Continue with Github"
-        icon={AiFillGithub}
-        onClick={() => signIn("github")}
-      />
+
       <div
         className="
           text-neutral-500 
+          dark:text-[#aeb3ba]
           text-center 
           mt-4 
           font-light
@@ -115,6 +110,7 @@ const RegisterModal = () => {
           <span
             onClick={onToggle}
             className="
+            dark:text-[#d8dce1]
               text-neutral-800
               cursor-pointer 
               hover:underline

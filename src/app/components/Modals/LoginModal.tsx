@@ -84,7 +84,7 @@ const LoginModal = () => {
 
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3 dark:bg-[#0E1629]">
-      <hr />
+      <hr className="dark:bg-gray-700" />
       <Button
         outline
         label="Continue with Google"
@@ -93,19 +93,20 @@ const LoginModal = () => {
       />
       <div
         className="
-      text-neutral-500 text-center mt-4 font-light"
+      text-neutral-500 text-center mt-4 font-light dark:text-[#b5bbc4]"
       >
         <p>
-          Using Rent My Space for First time?
+          Using Rent My Space for First time? {/*Space*/}
           <span
             onClick={onToggle}
             className="
               text-neutral-800
+              dark:text-[#d8dce1]
+
               cursor-pointer 
               hover:underline
             "
           >
-            {" "}
             Create an account
           </span>
         </p>

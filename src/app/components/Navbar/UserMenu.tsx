@@ -2,29 +2,20 @@
 
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-import useLoginModal from "@/app/hooks/useLoginModal";
-import useRegisterModal from "@/app/hooks/useRegisterModal";
 import { SafeUser } from "@/app/types";
-
-import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
 import useRentModal from "@/app/hooks/useRentModal";
 import ThemeToggleButton from "../Theme/ThemeToggleButton";
+import UserMenuModal from "../Modals/UserMenuModal";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
-  const router = useRouter();
-
-  const loginModal = useLoginModal();
-  const registerModal = useRegisterModal();
   const rentModal = useRentModal();
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
@@ -51,6 +42,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             transition 
             cursor-pointer
             dark:text-[#d8dce1]
+            dark:hover:bg-slate-700
             select-none
           "
         >
@@ -82,53 +74,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div
-          className="
-            absolute 
-            rounded-xl 
-            shadow-md
-            w-[40vw]
-            md:w-3/4 
-            bg-white 
-            overflow-hidden 
-            right-0 
-            top-12 
-            text-sm
-          "
-        >
-          <div className="flex flex-col cursor-pointer dark:bg-[#1E293B] select-none">
-            {currentUser ? (
-              <>
-                <MenuItem
-                  label="My trips"
-                  onClick={() => router.push("/trips")}
-                />
-                <MenuItem
-                  label="My favorites"
-                  onClick={() => router.push("/favorites")}
-                />
-                <MenuItem
-                  label="My reservations"
-                  onClick={() => router.push("/reservations")}
-                />
-                <MenuItem
-                  label="My properties"
-                  onClick={() => router.push("/properties")}
-                />
-                <MenuItem label="List Your Space" onClick={rentModal.onOpen} />
-                <hr />
-                <MenuItem label="Logout" onClick={() => signOut()} />
-              </>
-            ) : (
-              <>
-                <MenuItem label="Login" onClick={loginModal.onOpen} />
-                <MenuItem label="Sign up" onClick={registerModal.onOpen} />
-              </>
-            )}
-          </div>
-        </div>
-      )}
+      {isOpen && <UserMenuModal currentUser={currentUser} />}
     </div>
   );
 };
