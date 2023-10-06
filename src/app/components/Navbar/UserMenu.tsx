@@ -46,7 +46,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             select-none
           "
         >
-          List your Space
+          List My Space
         </div>
         <div
           onClick={toggleOpen}
@@ -75,7 +75,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           </div>
         </div>
       </div>
-      {isOpen && <UserMenuModal currentUser={currentUser} />}
+      {isOpen && (
+        <UserMenuModal currentUser={currentUser} toggleOpenClose={toggleOpen} />
+      )}
     </div>
   );
 };

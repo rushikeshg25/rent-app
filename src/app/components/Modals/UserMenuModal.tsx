@@ -8,9 +8,13 @@ import useRentModal from "@/app/hooks/useRentModal";
 
 interface UsermenuModalProps {
   currentUser?: SafeUser | null;
+  toggleOpenClose: () => void;
 }
 
-const UserMenuModal = ({ currentUser }: UsermenuModalProps) => {
+const UserMenuModal = ({
+  currentUser,
+  toggleOpenClose,
+}: UsermenuModalProps) => {
   const router = useRouter();
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
