@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import { twMerge } from "tailwind-merge";
 
 import Button from "../Button";
 
@@ -16,6 +17,7 @@ interface ModalProps {
   disabled?: boolean;
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
+  className?: string;
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -29,6 +31,7 @@ const Modal: React.FC<ModalProps> = ({
   disabled,
   secondaryAction,
   secondaryActionLabel,
+  className,
 }) => {
   const [showModal, setShowModal] = useState(isOpen);
 
@@ -68,7 +71,7 @@ const Modal: React.FC<ModalProps> = ({
   }
 
   return (
-    <div>
+    <div className={twMerge("", className)}>
       <div
         className="
           justify-center 

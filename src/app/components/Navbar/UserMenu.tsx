@@ -66,6 +66,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           hover:shadow-md 
           transition
           dark:text-[#8E9DB2]
+          select-none
           "
         >
           <AiOutlineMenu />

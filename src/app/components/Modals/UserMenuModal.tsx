@@ -19,9 +19,9 @@ const UserMenuModal = ({ currentUser }: UsermenuModalProps) => {
   return (
     <div
       className="
+      shadow-lg
     absolute 
     rounded-xl 
-    shadow-md
     w-[40vw]
     md:w-3/4 
     bg-white 

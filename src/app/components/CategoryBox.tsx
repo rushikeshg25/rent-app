@@ -65,6 +65,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         hover:bg-[#f1f5f9]
         dark:hover:bg-[#1e293b]
         rounded-lg
+        select-none
       `}
     >
       <Icon size={26} className="dark:text-[#8E9DB2]" />
